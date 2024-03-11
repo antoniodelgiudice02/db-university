@@ -5,4 +5,4 @@
 |Selezionare tutti gli studenti che hanno più di 30 anni|SELECT * FROM `students` WHERE 2024 - YEAR (date_of_birth) >= 30; |
 |Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea|SELECT * FROM `courses` WHERE period LIKE 'I s%' AND year = 1; |
 |Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020|SELECT * FROM `exams` WHERE TIME(`hour`) >= '14:00:00' AND date = '2020-06-20'; |
-|Da quanti dipartimenti è composta l'università?| 12 |
+|Da quanti dipartimenti è composta l'università?| SELECT COUNT(id) FROM `departments`; |
