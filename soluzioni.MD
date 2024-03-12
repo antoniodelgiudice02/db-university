@@ -7,3 +7,8 @@
 |Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020|SELECT * FROM `exams` WHERE TIME(`hour`) >= '14:00:00' AND date = '2020-06-20'; |
 |Da quanti dipartimenti è composta l'università?| SELECT COUNT(id) FROM `departments`; |
 |Quanti sono gli insegnanti che non hanno un numero di telefono?| SELECT COUNT(*) FROM `teachers` WHERE phone IS NULL; |
+
+# GROUP BY
+| TRACCIA                                      | SOLUZIONE                                                    |
+| :--------------------------------------------: | :------------------------------------------------------------: |
+|Contare quanti iscritti ci sono stati ogni anno| SELECT YEAR(enrolment_date), COUNT(enrolment_date) AS 'iscritti' FROM `students` GROUP BY YEAR(enrolment_date); |
